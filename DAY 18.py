@@ -4,16 +4,6 @@ import heroes
 import random
 import colorgram 
 
-# rgb_colors = []
-# colors = colorgram.extract("heist.jpg",30)
-# for color in colors:
-#     r = color.rgb.r
-#     g = color.rgb.g
-#     b = color.rgb.b
-#     new_color = (r,g,b)
-#     rgb_colors.append(new_color)
-
-# print(rgb_colors)
 tm = turtle_module.Turtle()
 turtle_module.colormode(255)
 tm.right(90)
@@ -29,34 +19,41 @@ color_list = [(245, 248, 253), (244, 235, 46), (196, 12, 34), (221, 159, 69), (4
 
 
 
-while life :
-    scope += 1 
-    for key in color_list[0:10]:
-            tm.dot(20,random.choice(color_list))
-            tm.penup()
-            tm.forward(50)
 
-    tm.setheading(90)
+tm.setheading(90)
+tm.forward(50)
+tm.setheading(180)
+tm.forward(500)
+tm.setheading(0)
+
+number_of_dots = 100
+
+
+for key in range(1,100):
+    tm.dot(20,random.choice(color_list))
+    tm.penup()
     tm.forward(50)
-    tm.setheading(180)
-    tm.forward(500)
-    tm.setheading(0)
 
-if scope == 10:
-    life = False 
+    if key % 10 == 0:            
+        tm.setheading(90)
+        tm.forward(50)
+        tm.setheading(180)
+        tm.forward(500)
+        tm.setheading(0)
+
+# tm.setheading(90)
+# tm.forward(50)
+# tm.setheading(180)
+# tm.forward(500)
+# tm.setheading(0)
+
+# if scope == 10:
+#   life == False 
 
 screen = turtle_module.Screen()
 screen.setup(900,900)
 screen.exitonclick()
 
-# print(rgb_colors)
-
-# tm.width(4)
-# tm.pensize(4)
-# tm.shape("turtle")
-# tm.color("green")
-# tm.speed(10)
-# print(heroes.gen())
 
 
 no_sides = 2 
@@ -68,13 +65,6 @@ def draw_shape(no_sides):
         tm.right(deg)
 
 
-# motion = [0,90,180,270]
-# for _ in range (100) :
-#     tm.forward(random.choice(motion))
-#     tm.right(random.choice(motion))
-#     tm.left(random.choice(motion))
-#     tm.backward(random.choice(motion))
-
 
 def change_color():
     R = random.random()
@@ -82,18 +72,6 @@ def change_color():
     G = random.random()
 
     tm.color(R, G, B)
-
-
-
-
-# for _ in range(200) : 
-#     tm.circle(100)
-#     tm.left(10)
-#     tm.hideturtle()
-#     change_color()
-# for shape_of_side in range(3,11):
-#     draw_shape(shape_of_side)
-#     change_color()
 
 
 
