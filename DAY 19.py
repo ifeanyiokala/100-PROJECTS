@@ -10,7 +10,7 @@ user_bet = screen.textinput(title = "Make your bet",prompt ="Which turtle will w
 colors = ['red', 'orange',"yellow","green","blue","purple"]
 Y_positions = [-70, -40, -10, 20, 50, 80]
 all_turtles = []
-
+new_turtle.hideturtle()
 
 for turtle_index in range(0,6):
     new_turtle.color(colors[turtle_index])
