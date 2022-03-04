@@ -8,13 +8,14 @@ class CarManager(Turtle):
 
     def __init__(self):
         self.all_cars = []
+        self.boost_up = STARTING_MOVE_DISTANCE
     
     
 
     def new_car(self):
         random_chance = random.randint(1,6)
-        if random_chance == 1:
-            new_car = Turtle("square")
+        if random_chance % 2 == 0:
+            new_car = Turtle("circle")
             new_car.color(random.choice(COLORS))
             new_car.setheading(180)
             new_car.shapesize(stretch_wid = 0.5,stretch_len = 2)
@@ -26,6 +27,8 @@ class CarManager(Turtle):
 
     def move_cars(self):
         for car in self.all_cars:
-            car.forward(STARTING_MOVE_DISTANCE)
+            car.forward(self.boost_up)
 
+    def jump_up(self):
+        self.boost_up += MOVE_INCREMENT
 

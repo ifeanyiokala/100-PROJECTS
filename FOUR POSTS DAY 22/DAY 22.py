@@ -21,10 +21,6 @@ scoreboard = Scoreboard()
 
 
 
-
-
-
-
 screen.listen()
 screen.onkey(pg.go_up,"Up")
 screen.onkey(pg.go_down,"Down")
