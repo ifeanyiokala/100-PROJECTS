@@ -16,11 +16,9 @@ num = len(home)
 
 while len(space) < 50 :
     answer_state = screen.textinput(  f"{score}/{num} States", "What's another state's name?").title()
+    
     if answer_state == "Exit":
-        answer = []
-        for state in home:
-            if state not in space:
-                answer.append(state)
+        answer = [state for state in home if state not in space]
         bus = pd.DataFrame(answer)
         bus.to_csv("us-states-game-start\\us-states-game-start\\states_to_learn.csv")
         break
