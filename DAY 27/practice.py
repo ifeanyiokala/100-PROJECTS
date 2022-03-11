@@ -95,6 +95,43 @@ window.mainloop()
 
 
 
+# def add(*arg):
+#     whole = sum(arg)
+#     print(whole)
+    
+# add(24,23,44,23,45)
+
+
+# def calculate(n, **kwargs):
+#     print(kwargs)
+#     print(kwargs["add"])
+
+#     n += kwargs["add"]
+#     n *= kwargs["multiply"]
+#     print(n)
+
+#get the window
+#insert the things needed 
+#create a function that converts from miles to kilometer 
+#insert it into the click on calculate,finito
+
+# calculate.pack()
+
+# calculate(3,add=3, multiply=5 )
+
+# class Car:
+
+#     def __init__(self, **kw):
+#         self.make = kw.get("make")
+#         self.model = kw.get("model")
+#         self.color = kw.get("color")
+#         self.seats = kw.get("seats")
+
+
+# my_car = Car(make = "Nissan", model = "Skyline")
+# print(my_car.seats)
+
+
 
 
 
