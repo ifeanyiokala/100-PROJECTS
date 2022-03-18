@@ -1,43 +1,28 @@
-from tkinter import * 
+#Password Generator Project
+import random
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
+nr_letters = random.randint(8, 10)
+nr_symbols = random.randint(2, 4)
+nr_numbers = random.randint(2, 4)
 
-# ---------------------------- PASSWORD GENERATOR ------------------------------- #
+password_list = []
 
-# ---------------------------- SAVE PASSWORD ------------------------------- #
+for char in range(nr_letters):
+  password_list.append(random.choice(letters))
 
-# ---------------------------- UI SETUP ------------------------------- #
-window = Tk()
-window.title("Password Manager")
-window.config(padx=20, pady=20, )
+for char in range(nr_symbols):
+  password_list += random.choice(symbols)
 
+for char in range(nr_numbers):
+  password_list += random.choice(numbers)
 
+random.shuffle(password_list)
 
-canvas = Canvas(width=240, height=240)
-tomato_img = PhotoImage(file="password-manager-start//logo.png")
-canvas.create_image(120, 100, image=tomato_img)
-canvas.pack()
+password = ""
+for char in password_list:
+  password += char
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-window.mainloop()
+print(f"Your password is: {password}")

@@ -1,0 +1,7 @@
+['Twitter', 'ifeanyi@nskai.com', 'BlueFace']
+['Instagram', 'ifeanyi@nskai.com', 'CameraFace']
+['Amazon', 'ifeanyi@nskai.com', 'WonderWoman']
+['nsk.ai.com', 'ifeanyi@nskai.com', 'FRQq4C9+7$(dOhq8']
+['Facebook', 'ifeanyi@nskai.com', 'ilikebook123']
+['ujgchgch', 'ifeanyi@nskai.com', '#9D7BHScB%b7D5rw)(']
+['vkj.jkb.', 'ifeanyi@nskai.com', 'kbk, ,l,m']
