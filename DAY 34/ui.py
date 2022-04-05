@@ -30,12 +30,12 @@ class QuizInterface:
 
 
         red_image = PhotoImage(file="images\\false.png")
-        self.false = Button(image=red_image, highlightthickness=0,command=self.true_pressed)
-        self.false.grid(column = 1,row = 2 )
+        self.false_button = Button(image=red_image, highlightthickness=0,command=self.true_pressed)
+        self.false_button.grid(column = 1,row = 2 )
         
         green_image = PhotoImage(file="images\\true.png")
-        self.true = Button(image=green_image, highlightthickness=0,command=self.false_pressed)
-        self.true.grid(column = 0,row = 2 )
+        self.true_button = Button(image=green_image, highlightthickness=0,command=self.false_pressed)
+        self.true_button.grid(column = 0,row = 2 )
 
 
 
@@ -52,7 +52,8 @@ class QuizInterface:
         else:
             self.canvas.config(bg="white")
             self.canvas.itemconfig(self.question_text, text = "You've reached the end of the quiz. :)")
-    
+            self.true_button.config(state="disabled")
+            self.false_button.config(state="disabled")
     def true_pressed(self):
         self.give_feedback(self.quiz.check_answer("True"))
 
