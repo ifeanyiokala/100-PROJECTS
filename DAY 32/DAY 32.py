@@ -10,6 +10,7 @@ password_1 = "badboysforlife"
 # Assigning the month and day to a variable 
 today = datetime.now()
 today_tuple = (today.month, today.day)
+print(today_tuple)
 
 
 # Use pandas to read the csv file
@@ -24,8 +25,10 @@ if today_tuple in birthdays_dict:
     with open(file_path) as letter_file:
         contents = letter_file.read()
         contents = contents.replace("[NAME]", birthday_person["name"])
+        birthday_person["email"]
 
-    with smtplib.SMTP('smtp.mail.yahoo.com') as connection:
+
+    with smtplib.SMTP('smtp.mail.yahoo.com',465) as connection:
         connection.starttls()
         connection.login(my_email, password_1)
         connection.sendemail(
