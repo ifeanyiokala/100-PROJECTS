@@ -57,6 +57,7 @@ else :
 
 # sliced out dictionary key "articles"
 tsla_news = news.json()["articles"]
+print(tsla_news)
 
 msg_title = tsla_news[:3]
 
