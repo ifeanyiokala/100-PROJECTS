@@ -1,0 +1,23 @@
+body {
+    background-color:#E8F9FD;
+}
+
+.true {
+    background-color: gold;
+}
+
+.red {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 200px;
+}
+
+.blue{
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    
+
+}
