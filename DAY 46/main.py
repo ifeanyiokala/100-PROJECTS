@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import os
 
 
 date = input("What year would you like to travel to ? Type the date in this format YYYY-MM-DD:")
@@ -27,7 +28,8 @@ song_names=[s.translate(no_plus_minus) for s in name]
 
 # <h3 id="title-of-a-story" class="c-title a-no-trucate a-font-primary-bold-s u-letter-spacing-0021 lrv-u-font-size-18@tablet lrv-u-font-size-16 u-line-height-125 u-line-height-normal@mobile-max a-truncate-ellipsis u-max-width-330 u-max-width-230@tablet-only">
 
-	
+PW = os.get("CL_ID")
+RW = os.get("CL_SCRT")
 import spotipy
 from pprint import pprint
 from spotipy.oauth2 import SpotifyOAuth
@@ -36,8 +38,8 @@ sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(
         scope="playlist-modify-private",
         redirect_uri="https://example.com" ,
-        client_id="f6fb3838a5884ab8bc32b96d16a9f39a",
-        client_secret="344b1ba1899749d481880b2eb288614a",
+        client_id=PW,
+        client_secret=RW,
         show_dialog=True,
         cache_path="token.txt"
 
