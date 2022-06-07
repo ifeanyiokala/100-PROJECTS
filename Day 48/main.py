@@ -37,10 +37,9 @@ for i in range(1,6):
     find = driver.find_element_by_xpath(f'//*[@id="content"]/div/section/div[3]/div[2]/div/ul/li[{i}]/a')
 
     title = find.text
-
-    final = {"time":new_time,"name":title}
     for i in range(0,5):
-        home = {i:final}
+        final = {"time":new_time,"name":title}
+        home[i] = final 
     
     
 
