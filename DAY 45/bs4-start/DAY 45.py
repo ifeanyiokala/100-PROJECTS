@@ -30,6 +30,8 @@ articles_new = name[::-1]
     # print(name)
     # new = name.split(")")
     # articles_text.append(new)
+
+
      
 # print(articles_new.count())
 # for i in range(100):
