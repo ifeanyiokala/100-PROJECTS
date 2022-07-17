@@ -1,7 +1,7 @@
 # DAY 49
 
 # create a job application bot for linkedIn
-# Importing the neeeded  modules
+# Importing the needed  modules
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
